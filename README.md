@@ -9,6 +9,7 @@ You can find the backend in this repository: https://github.com/Fhree/DoYourTask
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Remenber to change the files in the Environments folder and set your backend URL.
 
 ## Code scaffolding
 
