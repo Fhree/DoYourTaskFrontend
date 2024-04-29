@@ -1,0 +1,12 @@
+<div class="card-container">
+    <div>
+        <h5>{{ task.name }} - {{ task.status.name }} - {{ task.type.name }}</h5>
+        <p>{{ task.description }}</p>
+    </div>
+    <hr>
+    <div>
+        <button class="btn btn-success btn-sm" (click)="completeTask()">Complete</button>
+        <button class="btn btn-primary btn-sm" (click)="updateTask()">Update</button>
+        <button class="btn btn-danger btn-sm" (click)="deleteTask()">Delete</button>
+    </div>
+</div>

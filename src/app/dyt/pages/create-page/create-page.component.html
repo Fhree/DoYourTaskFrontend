@@ -1,0 +1,27 @@
+<div class="container">
+    <h3>Create task</h3>
+    <hr>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+        <div class="container-byItem">
+            <div>
+                <label for="nameInput">Name</label>
+            </div>
+            <input type="text" id="nameInput" formControlName="name">
+        </div>
+        <div class="container-byItem">
+            <div>
+                <label for="descriptionTA">Description</label>
+            </div>
+            <textarea id="descriptionTA" cols="30" rows="10" formControlName="description"></textarea>
+        </div>
+        <div class="container-byItem">
+            <label for="typeTaskSelect">Type</label>
+            <select [(ngModel)]="selectedTypeTask" id="typeTaskSelect" formControlName="typeId">
+                @for (item of searchTypeTasks(); track $index) {
+                    <option [value]="item.id">{{ item.name }}</option>
+                }
+            </select>
+        </div>
+    </form>
+    <button class="btn btn-success btn-sm" (click)="onSubmit()">Create</button>
+</div>
